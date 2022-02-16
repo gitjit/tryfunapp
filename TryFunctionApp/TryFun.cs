@@ -53,7 +53,7 @@ namespace TryFunctionApp
             var sq = qClient.GetQueueClient("sessions");
             await sq.SendMessageAsync("a new one " + DateTime.Now.ToString());
 
-            var container = cosmosClient.GetContainer("tryDb", "tries");
+            var container = cosmosClient.GetContainer("zlyticsDb", "zlytics");
             var payload = new CosmosModel
             {
                 Id = Guid.NewGuid().ToString(),
